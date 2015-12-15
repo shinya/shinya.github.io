@@ -1,0 +1,28 @@
+@charset "utf-8";
+
+.loco {
+	font-size: 14px;
+}
+
+.loco-table {
+	margin-top: 20px;
+}
+
+.loco-title {
+	font-size: 20px;
+	font-weight: bold;
+}
+
+.no-picture {
+	text-align: center;
+	text-decoration: none;
+	width: 128px;
+	padding: 20px 0px;
+	color: #999999;
+	background:#dddddd;
+}
+
+
+.root {
+	margin-bottom: 20px;
+}
