@@ -171,7 +171,7 @@
 			.data(pie(newData))
 			//文字を更新します。
 			.text(function(d) {
-				console.log('name: ' + d.data.name);
+				// console.log('name: ' + d.data.name);
 				if(d.data.score <= 0){
 					return '';
 				}else{
@@ -202,7 +202,7 @@
 		var labelName = '';
 
 		for(var i in skills){
-			console.log(skills[i].name);
+			// console.log(skills[i].name);
 
 			if(skills[i].category == 'Language') {
 				className = 'success';
