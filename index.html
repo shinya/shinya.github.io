@@ -10,143 +10,82 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
-        <div class="container">
-            <a class="navbar-brand" href="#home">Shinya</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#home">Home</a>
+    <!-- Header -->
+    <header class="site-header">
+        <div class="header-container">
+            <div class="header-brand">
+                <a href="#home" class="brand-link">Saita Shinya</a>
+            </div>
+            <nav class="header-nav">
+                <ul class="header-nav-list">
+                    <li class="header-nav-item">
+                        <a href="#works" class="header-nav-link">WORKS</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#about">About</a>
+                    <li class="header-nav-item">
+                        <a href="#skills" class="header-nav-link">SKILL</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#skills">Skills</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#works">Works</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#contact">Contact</a>
+                    <li class="header-nav-item">
+                        <a href="#contact" class="header-nav-link">CONTACT</a>
                     </li>
                 </ul>
-            </div>
+            </nav>
         </div>
-    </nav>
+    </header>
 
-    <!-- Hero Section -->
+    <!-- Hero Section - Split Screen Layout -->
     <section id="home" class="hero-section">
-        <div class="container">
-            <div class="row align-items-center min-vh-100">
-                <div class="col-lg-6">
-                    <h1 class="display-3 fw-bold text-white mb-4">Hello, I'm Shinya</h1>
-                    <p class="lead text-white-50 mb-4">フルスタックエンジニアとして、ユーザーに価値を提供するサービスを開発しています</p>
-                    <div class="hero-buttons">
-                        <a href="#works" class="btn btn-primary btn-lg me-3">作品を見る</a>
-                        <a href="#contact" class="btn btn-outline-light btn-lg">お問い合わせ</a>
+        <div class="hero-split-container">
+            <!-- Left Side: Name and Profile -->
+            <div class="hero-left">
+                <div class="hero-content">
+                    <h1 class="hero-name">Saita Shinya</h1>
+                    <div class="hero-profile">
+                        <p>Web技術を中心したシステムエンジニアです。利用者が喜ぶ顔を見るのが好きです。</p>
+                        <p>デザインと技術の両刀で、様々なアプリやサービスを開発しています。</p>
+                        <p>「最初の顧客は自分自身」をモットーに、まずは自分が使いやすいサービスを心がけています。</p>
                     </div>
                 </div>
-                <div class="col-lg-6 text-center">
-                    <div class="hero-avatar">
-                        <i class="fas fa-user-circle fa-10x text-white-50"></i>
-                    </div>
+            </div>
+
+            <!-- Right Side: Image or Content -->
+            <div class="hero-right">
+                <div class="hero-image">
+                    <img src="img/profile.jpg" alt="Saita Shinya" class="hero-profile-img">
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- About Section -->
-    <section id="about" class="py-5">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 mx-auto text-center">
-                    <h2 class="section-title">About Me</h2>
-                    <p class="lead mb-5">エンジニアとして、常に新しい技術を学び、実用的なソリューションを提供することを心がけています。</p>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-4 text-center mb-4">
-                    <div class="about-card">
-                        <i class="fas fa-code fa-3x mb-3"></i>
-                        <h4>開発</h4>
-                        <p>Webアプリケーションからデスクトップアプリまで、幅広い開発経験があります。</p>
-                    </div>
-                </div>
-                <div class="col-md-4 text-center mb-4">
-                    <div class="about-card">
-                        <i class="fas fa-lightbulb fa-3x mb-3"></i>
-                        <h4>アイデア</h4>
-                        <p>ユーザーのニーズを理解し、使いやすく実用的なサービスを設計します。</p>
-                    </div>
-                </div>
-                <div class="col-md-4 text-center mb-4">
-                    <div class="about-card">
-                        <i class="fas fa-rocket fa-3x mb-3"></i>
-                        <h4>実行力</h4>
-                        <p>アイデアを形にし、実際にサービスとして提供するまで一貫してサポートします。</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
     <!-- Skills Section -->
-    <section id="skills" class="py-5 bg-light">
+    <section id="skills" class="py-5">
         <div class="container">
             <div class="row">
-                <div class="col-lg-8 mx-auto text-center">
-                    <h2 class="section-title">Skills & Technologies</h2>
-                    <p class="lead mb-5">幅広い技術スタックで、様々なプロジェクトに対応できます。</p>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-6 col-lg-3 mb-4">
-                    <div class="skill-card">
-                        <h5>Frontend</h5>
-                        <div class="skill-tags">
-                            <span class="badge bg-primary">HTML/CSS</span>
-                            <span class="badge bg-primary">JavaScript</span>
-                            <span class="badge bg-primary">Vue.js</span>
-                            <span class="badge bg-primary">Bootstrap</span>
-                        </div>
+                <div class="col-lg-8 mx-auto">
+                    <h2 class="section-title-simple">SKILL</h2>
+                    <div class="skill-item">
+                        <h3 class="skill-name">HTML5/CSS3/Javascript</h3>
+                        <p class="skill-description">レスポンシブデザインやCSSアニメーションも含めた、開発経験多数。Webデザインとコーディングが得意。</p>
                     </div>
-                </div>
-                <div class="col-md-6 col-lg-3 mb-4">
-                    <div class="skill-card">
-                        <h5>Backend</h5>
-                        <div class="skill-tags">
-                            <span class="badge bg-success">Node.js</span>
-                            <span class="badge bg-success">Python</span>
-                            <span class="badge bg-success">Rust</span>
-                            <span class="badge bg-success">PHP</span>
-                        </div>
+                    <div class="skill-item">
+                        <h3 class="skill-name">PHP</h3>
+                        <p class="skill-description">一番開発経験が長い言語です。一番好きなフレームワークはCakePHPです。</p>
                     </div>
-                </div>
-                <div class="col-md-6 col-lg-3 mb-4">
-                    <div class="skill-card">
-                        <h5>Tools</h5>
-                        <div class="skill-tags">
-                            <span class="badge bg-info">Git</span>
-                            <span class="badge bg-info">Docker</span>
-                            <span class="badge bg-info">AWS</span>
-                            <span class="badge bg-info">Chrome Ext</span>
-                        </div>
+                    <div class="skill-item">
+                        <h3 class="skill-name">Node.js / Python / Rust</h3>
+                        <p class="skill-description">PHPの経験年数には劣りますが、最近の開発アプリはこれが多数を占めています。</p>
                     </div>
-                </div>
-                <div class="col-md-6 col-lg-3 mb-4">
-                    <div class="skill-card">
-                        <h5>Other</h5>
-                        <div class="skill-tags">
-                            <span class="badge bg-warning">Markdown</span>
-                            <span class="badge bg-warning">SVG</span>
-                            <span class="badge bg-warning">API Design</span>
-                            <span class="badge bg-warning">UI/UX</span>
-                        </div>
+                    <div class="skill-item">
+                        <h3 class="skill-name">Go</h3>
+                        <p class="skill-description">パフォーマンスを重視した開発ではGoを使った開発が多いです。好きなフレームワークはGinです。</p>
+                    </div>
+                    <div class="skill-item">
+                        <h3 class="skill-name">Git / Docker / AWS</h3>
+                        <p class="skill-description">バージョン管理、コンテナ化、クラウドインフラなど、開発環境の構築と運用に対応できます。</p>
+                    </div>
+                    <div class="skill-item">
+                        <h3 class="skill-name">Photoshop / Illustrator / Premiere Pro</h3>
+                        <p class="skill-description">デザインと動画編集も得意です。元々頭のイメージを形にするのが好きです。</p>
                     </div>
                 </div>
             </div>
@@ -154,142 +93,123 @@
     </section>
 
     <!-- Works Section -->
-    <section id="works" class="py-5">
+    <section id="works" class="py-5 bg-light">
         <div class="container">
             <div class="row">
-                <div class="col-lg-8 mx-auto text-center">
-                    <h2 class="section-title">Works & Projects</h2>
-                    <p class="lead mb-5">これまでに開発したサービスやアプリケーションをご紹介します。</p>
-                </div>
-            </div>
+                <div class="col-lg-8 mx-auto">
+                    <h2 class="section-title-simple">WORKS</h2>
 
-            <!-- Web Services -->
-            <div class="row mb-5">
-                <div class="col-12">
-                    <h3 class="works-subtitle">Web Services</h3>
-                </div>
-                <div class="col-lg-6 mb-4">
-                    <div class="work-card" data-work="svg-calendar">
-                        <div class="work-card-header">
-                            <h4>SVGカレンダー</h4>
-                            <span class="work-type badge bg-primary">Web Service</span>
+                    <div class="work-item">
+                        <div class="work-image">
+                            <a href="https://svg-calendar.com/" target="_blank">
+                                <img src="https://svg-calendar.com/favicon.ico" alt="SVGカレンダー" class="work-img">
+                            </a>
                         </div>
-                        <p>拡大しても劣化しないベクター形式のカレンダー。日本の祝日対応、カスタマイズ可能な色設定、過去の日付の斜線表示機能を提供。</p>
-                        <div class="work-links">
-                            <a href="https://svg-calendar.com/" target="_blank" class="btn btn-sm btn-outline-primary">サイトを見る</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6 mb-4">
-                    <div class="work-card" data-work="dev-cabinet">
-                        <div class="work-card-header">
-                            <h4>dev-cabinet</h4>
-                            <span class="work-type badge bg-primary">Web Service</span>
-                        </div>
-                        <p>ゲームのステータス画面のようにエンジニアのスキルを紹介するサービス。視覚的に分かりやすいスキルマップを提供。</p>
-                        <div class="work-links">
-                            <a href="https://dev-cabinet.com/" target="_blank" class="btn btn-sm btn-outline-primary">サイトを見る</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Chrome Extensions -->
-            <div class="row mb-5">
-                <div class="col-12">
-                    <h3 class="works-subtitle">Chrome Extensions</h3>
-                </div>
-                <div class="col-lg-6 mb-4">
-                    <div class="work-card" data-work="notify-me">
-                        <div class="work-card-header">
-                            <h4>Notify me!</h4>
-                            <span class="work-type badge bg-success">Chrome Extension</span>
-                        </div>
-                        <p>会議などの予定を見過ごさないための通知アプリ。集中作業中でも時間を忘れずに済むよう、画面に通知を表示。</p>
-                        <div class="work-links">
-                            <a href="https://chromewebstore.google.com/detail/notify-me/mbdbpcheokpifdgllibffdcpefngijfk" target="_blank" class="btn btn-sm btn-outline-success">Chrome Web Store</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Desktop Applications -->
-            <div class="row mb-5">
-                <div class="col-12">
-                    <h3 class="works-subtitle">Desktop Applications</h3>
-                </div>
-                <div class="col-lg-6 mb-4">
-                    <div class="work-card" data-work="micro-note">
-                        <div class="work-card-header">
-                            <h4>Micro Note</h4>
-                            <span class="work-type badge bg-warning">Desktop App</span>
-                        </div>
-                        <p>数行程度のメモをTwitterのように保存して貼り付けられるようにするアプリ。軽量で使いやすいメモツール。</p>
-                        <div class="work-links">
-                            <a href="https://github.com/shinya/micro-note" target="_blank" class="btn btn-sm btn-outline-warning">GitHub</a>
-                        </div>
-                        <div class="work-placeholder">
-                            <div class="app-icon-placeholder">
-                                <i class="fas fa-sticky-note fa-3x text-muted"></i>
-                                <small class="d-block mt-2">512x512 Icon</small>
+                        <div class="work-info">
+                            <h3 class="work-title">
+                                <a href="https://svg-calendar.com/" target="_blank" class="work-title-link">SVGカレンダー</a>
+                            </h3>
+                            <div class="work-meta">
+                                <span class="work-category">Webサービス</span>
+                                <span class="work-tags">デザイン / 開発（レスポンシブデザイン） / サーバー構築・運用</span>
                             </div>
-                            <div class="app-screenshot-placeholder">
-                                <i class="fas fa-desktop fa-3x text-muted"></i>
-                                <small class="d-block mt-2">Full HD Screenshot</small>
-                            </div>
+                            <p class="work-description">拡大しても劣化しないベクター形式のカレンダー。<br>
+                                日本の祝日対応、カスタマイズ可能な色設定、過去の日付の斜線表示機能を提供。<br>
+                                レスポンシブデザイン対応。</p>
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-6 mb-4">
-                    <div class="work-card" data-work="bokuchi">
-                        <div class="work-card-header">
-                            <h4>Bokuchi</h4>
-                            <span class="work-type badge bg-warning">Desktop App</span>
+                    <div class="work-item">
+                        <div class="work-image">
+                            <a href="https://dev-cabinet.com/" target="_blank">
+                                <img src="img/works/dev-cabinet.png" alt="dev-cabinet" class="work-img">
+                            </a>
                         </div>
-                        <p>軽くて高性能なMarkdownエディター。シンプルなインターフェースで、Markdownの編集に特化した機能を提供。</p>
-                        <div class="work-links">
-                            <a href="https://github.com/shinya/md-editor" target="_blank" class="btn btn-sm btn-outline-warning">GitHub</a>
-                        </div>
-                        <div class="work-placeholder">
-                            <div class="app-icon-placeholder">
-                                <i class="fas fa-edit fa-3x text-muted"></i>
-                                <small class="d-block mt-2">512x512 Icon</small>
+                        <div class="work-info">
+                            <h3 class="work-title">
+                                <a href="https://dev-cabinet.com/" target="_blank" class="work-title-link">dev-cabinet</a>
+                            </h3>
+                            <div class="work-meta">
+                                <span class="work-category">Webサービス</span>
+                                <span class="work-tags">デザイン / 開発（レスポンシブデザイン） / サーバー構築・運用</span>
                             </div>
-                            <div class="app-screenshot-placeholder">
-                                <i class="fas fa-desktop fa-3x text-muted"></i>
-                                <small class="d-block mt-2">Full HD Screenshot</small>
-                            </div>
+                            <p class="work-description">ゲームのステータス画面のようにエンジニアのスキルを紹介するサービス。<br>
+                                視覚的に分かりやすいスキルマップを提供。<br>
+                                レスポンシブデザイン対応。</p>
                         </div>
                     </div>
-                </div>
-            </div>
-
-            <!-- Other Projects -->
-            <div class="row">
-                <div class="col-12">
-                    <h3 class="works-subtitle">Other Projects</h3>
-                </div>
-                <div class="col-lg-6 mb-4">
-                    <div class="work-card" data-work="github">
-                        <div class="work-card-header">
-                            <h4>GitHub</h4>
-                            <span class="work-type badge bg-dark">Open Source</span>
+                    <div class="work-item">
+                        <div class="work-image">
+                            <a href="https://chromewebstore.google.com/detail/notify-me/mbdbpcheokpifdgllibffdcpefngijfk?hl=ja" target="_blank">
+                                <img src="img/works/notify-me.png" alt="notify-me" class="work-img">
+                            </a>
                         </div>
-                        <p>オープンソースプロジェクトの開発や貢献を行っています。様々な技術スタックでの開発経験があります。</p>
-                        <div class="work-links">
-                            <a href="https://github.com/shinya" target="_blank" class="btn btn-sm btn-outline-dark">GitHub Profile</a>
+                        <div class="work-info">
+                            <h3 class="work-title">
+                                <a href="https://chromewebstore.google.com/detail/notify-me/mbdbpcheokpifdgllibffdcpefngijfk?hl=ja" target="_blank" class="work-title-link">Notify me!</a>
+                            </h3>
+                            <div class="work-meta">
+                                <span class="work-category">Chrome拡張機能</span>
+                                <span class="work-tags">デザイン / 開発</span>
+                            </div>
+                            <p class="work-description">会議などの予定を見過ごさないための通知アプリ。 <br>
+                                集中作業中でも時間を忘れずに済むよう、画面に通知を表示。</p>
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-6 mb-4">
-                    <div class="work-card" data-work="qiita">
-                        <div class="work-card-header">
-                            <h4>Qiita</h4>
-                            <span class="work-type badge bg-info">Technical Blog</span>
+                    <div class="work-item">
+                        <div class="work-image">
+                            <a href="https://github.com/shinya/micro-note" target="_blank">
+                                <img src="img/works/micro-note.png" alt="micro-note" class="work-img">
+                            </a>
                         </div>
-                        <p>技術的な知見や開発の過程で学んだことを記事として発信しています。エンジニアコミュニティへの貢献を心がけています。</p>
-                        <div class="work-links">
-                            <a href="https://qiita.com/ssaita" target="_blank" class="btn btn-sm btn-outline-info">Qiita Profile</a>
+                        <div class="work-info">
+                            <h3 class="work-title">
+                                <a href="https://github.com/shinya/micro-note" target="_blank" class="work-title-link">Micro Note</a>
+                            </h3>
+                            <div class="work-meta">
+                                <span class="work-category">デスクトップアプリケーション</span>
+                                <span class="work-tags">デザイン / 開発</span>
+                            </div>
+                            <p class="work-description">数行程度のメモをTwitterのように保存して貼り付けられるようにするアプリ。<br>
+                                軽量で使いやすいメモツール。<br>
+                                クロスプラットフォーム対応。</p>
+                        </div>
+                    </div>
+                    <div class="work-item">
+                        <div class="work-image">
+                            <a href="https://github.com/Bokuchi-Editor/bokuchi" target="_blank">
+                                <img src="img/works/bokuchi.png" alt="bokuchi" class="work-img">
+                            </a>
+                        </div>
+                        <div class="work-info">
+                            <h3 class="work-title">
+                                <a href="https://github.com/Bokuchi-Editor/bokuchi" target="_blank" class="work-title-link">Bokuchi</a>
+                            </h3>
+                            <div class="work-meta">
+                                <span class="work-category">デスクトップアプリケーション</span>
+                                <span class="work-tags">デザイン / 開発</span>
+                            </div>
+                            <p class="work-description">クロスプラットフォーム対応の、軽くて高性能なMarkdownエディター。<br>
+                                シンプルなインターフェースで、Markdownの編集に特化した機能を提供。<br>
+                                特に、業務手順書などを書くときに重宝する変数機能を独自実装。
+                            </p>
+                        </div>
+                    </div>
+                    <div class="work-item">
+                        <div class="work-image">
+                            <a href="https://github.com/shinya/lightning-timer" target="_blank">
+                                <img src="img/works/lightning-timer.png" alt="lightning-timer" class="work-img">
+                            </a>
+                        </div>
+                        <div class="work-info">
+                            <h3 class="work-title">
+                                <a href="https://github.com/shinya/lightning-timer" target="_blank" class="work-title-link">Lightning Timer</a>
+                            </h3>
+                            <div class="work-meta">
+                                <span class="work-category">デスクトップアプリケーション</span>
+                                <span class="work-tags">デザイン / 開発</span>
+                            </div>
+                            <p class="work-description">軽量なクロスプラットフォームタイマーアプリケーション。<br>
+                                エンジニアのLT時間を計測するために作成した「絶対に気づくタイマー」がモットーです。</p>
                         </div>
                     </div>
                 </div>
@@ -298,35 +218,25 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="contact-section py-5 text-white">
+    <section id="contact" class="py-5">
         <div class="container">
             <div class="row">
-                <div class="col-lg-8 mx-auto text-center">
-                    <h2 class="section-title text-white">Contact & Links</h2>
-                    <p class="lead mb-5">お問い合わせやプロジェクトのご相談など、お気軽にご連絡ください。</p>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-4 text-center mb-4">
-                    <a href="https://github.com/shinya" target="_blank" class="contact-link">
-                        <i class="fab fa-github fa-3x mb-3"></i>
-                        <h5>GitHub</h5>
-                        <p>オープンソースプロジェクト</p>
-                    </a>
-                </div>
-                <div class="col-md-4 text-center mb-4">
-                    <a href="https://qiita.com/ssaita" target="_blank" class="contact-link">
-                        <i class="fas fa-pen-fancy fa-3x mb-3"></i>
-                        <h5>Qiita</h5>
-                        <p>技術ブログ</p>
-                    </a>
-                </div>
-                <div class="col-md-4 text-center mb-4">
-                    <a href="mailto:contact@example.com" class="contact-link">
-                        <i class="fas fa-envelope fa-3x mb-3"></i>
-                        <h5>Email</h5>
-                        <p>お問い合わせ</p>
-                    </a>
+                <div class="col-lg-8 mx-auto">
+                    <h2 class="section-title-simple">CONTACT</h2>
+                    <div class="contact-content">
+                        <p class="contact-text">お問い合わせ等は、<br>X（旧Twitter）のアカウントへどうぞ。</p>
+                        <div class="contact-links">
+                            <a href="https://github.com/shinya" target="_blank" class="contact-link-item">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                            <a href="https://qiita.com/ssaita" target="_blank" class="contact-link-item">
+                                <i class="fas fa-pen-fancy"></i> Qiita
+                            </a>
+                            <a href="https://x.com/saita_shinya" target="_blank" class="contact-link-item">
+                                <i class="fab fa-twitter"></i> X
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -335,7 +245,11 @@
     <!-- Footer -->
     <footer class="py-4">
         <div class="container">
-            <p>&copy; 2025 Shinya. All rights reserved.</p>
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center">
+                    <p>&copy; 2025 Saita Shinya</p>
+                </div>
+            </div>
         </div>
     </footer>
 
