@@ -879,7 +879,7 @@ footer p {
     }
 
     .hero-section {
-        padding-top: 80px;
+        padding-top: 100px;
         min-height: auto;
         overflow-x: hidden;
     }
@@ -891,7 +891,7 @@ footer p {
 
     .hero-left,
     .hero-right {
-        padding: 1.5rem 0.75rem;
+        padding: 2rem 0.75rem;
         min-width: 0;
         overflow-x: hidden;
     }
@@ -904,6 +904,7 @@ footer p {
     .hero-name {
         font-size: 1.75rem;
         margin-bottom: 1rem;
+        margin-top: 0.5rem;
         line-height: 1.2;
         word-break: break-word;
         overflow-wrap: break-word;
