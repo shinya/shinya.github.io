@@ -537,6 +537,23 @@ section.bg-light {
     margin: 1rem 0 0 0;
 }
 
+.work-policy-link {
+    display: inline-block;
+    margin-top: 0.5rem;
+    font-size: 0.8rem;
+    color: #adb5bd;
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.work-policy-link i {
+    margin-right: 0.25rem;
+}
+
+.work-policy-link:hover {
+    color: var(--primary-color);
+}
+
 /* Contact Section - Simple Style */
 .contact-content {
     margin-top: 2rem;
