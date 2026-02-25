@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Notify me! - Full-Screen Notification Timer & Scheduled Alarm</title>
+    <title>Privacy Policy - Notify me!</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -130,12 +130,6 @@
             margin-bottom: 1.5rem;
         }
 
-        .app-buttons {
-            display: flex;
-            gap: 1rem;
-            flex-wrap: wrap;
-        }
-
         .btn-cws {
             display: inline-flex;
             align-items: center;
@@ -157,131 +151,83 @@
             box-shadow: var(--shadow-medium);
         }
 
-        /* Features */
-        .features-section {
+        /* Privacy Policy */
+        .policy-section {
             padding: 4rem 0;
         }
 
-        .features-content {
+        .policy-content {
             max-width: 800px;
             margin: 0 auto;
         }
 
-        .features-title {
-            font-size: 2rem;
+        .policy-title {
+            font-size: 2.5rem;
             font-weight: 800;
             color: var(--dark-color);
-            margin-bottom: 2.5rem;
+            margin-bottom: 0.5rem;
             letter-spacing: 0.05em;
         }
 
-        .feature-item {
-            display: flex;
-            gap: 1.25rem;
-            margin-bottom: 2rem;
-            padding-bottom: 2rem;
-            border-bottom: 1px solid #e9ecef;
+        .policy-effective {
+            font-size: 0.9rem;
+            color: var(--secondary-color);
+            margin-bottom: 3rem;
         }
 
-        .feature-item:last-child {
-            border-bottom: none;
-            margin-bottom: 0;
-            padding-bottom: 0;
+        .policy-subsection {
+            margin-bottom: 2.5rem;
         }
 
-        .feature-icon {
-            flex-shrink: 0;
-            width: 48px;
-            height: 48px;
-            border-radius: 12px;
-            background: rgba(61, 207, 194, 0.1);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .feature-icon i {
+        .policy-subsection h3 {
             font-size: 1.25rem;
-            color: var(--primary-color);
-        }
-
-        .feature-text h3 {
-            font-size: 1.1rem;
             font-weight: 700;
             color: var(--dark-color);
-            margin-bottom: 0.5rem;
+            margin-bottom: 1rem;
+            padding-left: 1rem;
+            border-left: 4px solid var(--primary-color);
+            line-height: 1.4;
         }
 
-        .feature-text p {
-            font-size: 0.95rem;
-            line-height: 1.7;
-            color: var(--secondary-color);
-            margin: 0;
-        }
-
-        /* Privacy Policy Link */
-        .policy-link-section {
-            padding: 3rem 0;
-            background: var(--light-color);
-            border-top: 1px solid #e9ecef;
-        }
-
-        .policy-link-content {
-            max-width: 800px;
-            margin: 0 auto;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 2rem;
-        }
-
-        .policy-link-text h2 {
-            font-size: 1.5rem;
-            font-weight: 800;
-            color: var(--dark-color);
-            margin-bottom: 0.5rem;
-        }
-
-        .policy-link-text p {
-            font-size: 0.95rem;
-            color: var(--secondary-color);
-            margin: 0;
-        }
-
-        .btn-policy {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            background: #ffffff;
-            color: var(--dark-color);
-            text-decoration: none;
-            padding: 0.75rem 1.5rem;
-            border-radius: 12px;
-            font-weight: 600;
-            font-size: 0.95rem;
-            transition: var(--transition);
-            border: 2px solid var(--primary-color);
-            white-space: nowrap;
-        }
-
-        .btn-policy i {
+        .policy-subsection h3 i {
             color: var(--primary-color);
+            margin-right: 0.5rem;
+            width: 1.25em;
+            text-align: center;
         }
 
-        .btn-policy:hover {
-            background: var(--primary-color);
-            color: #ffffff;
-            transform: translateY(-2px);
-            box-shadow: var(--shadow-medium);
+        .policy-subsection p,
+        .policy-subsection ul {
+            font-size: 0.95rem;
+            line-height: 1.8;
+            color: var(--secondary-color);
         }
 
-        .btn-policy:hover i {
-            color: #ffffff;
+        .policy-subsection ul {
+            padding-left: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .policy-subsection ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        .policy-subsection a {
+            color: var(--primary-color);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .policy-subsection a:hover {
+            color: var(--primary-dark);
+            text-decoration: underline;
         }
 
         /* Contact */
         .contact-section {
             padding: 4rem 0;
+            background: var(--light-color);
+            border-top: 1px solid #e9ecef;
         }
 
         .contact-content {
@@ -361,21 +307,12 @@
                 font-size: 1rem;
             }
 
-            .app-buttons {
-                justify-content: center;
+            .policy-title {
+                font-size: 2rem;
             }
 
-            .features-title {
-                font-size: 1.75rem;
-            }
-
-            .features-section {
+            .policy-section {
                 padding: 3rem 0;
-            }
-
-            .policy-link-content {
-                flex-direction: column;
-                text-align: center;
             }
 
             .contact-section {
@@ -412,40 +349,22 @@
                 font-size: 0.9rem;
             }
 
-            .btn-cws,
-            .btn-policy {
+            .btn-cws {
                 font-size: 0.85rem;
                 padding: 0.6rem 1.2rem;
             }
 
-            .features-title {
+            .policy-title {
                 font-size: 1.5rem;
             }
 
-            .feature-item {
-                gap: 1rem;
+            .policy-subsection h3 {
+                font-size: 1.1rem;
             }
 
-            .feature-icon {
-                width: 40px;
-                height: 40px;
-                border-radius: 10px;
-            }
-
-            .feature-icon i {
-                font-size: 1rem;
-            }
-
-            .feature-text h3 {
-                font-size: 1rem;
-            }
-
-            .feature-text p {
+            .policy-subsection p,
+            .policy-subsection ul {
                 font-size: 0.9rem;
-            }
-
-            .policy-link-text h2 {
-                font-size: 1.25rem;
             }
 
             .contact-title {
@@ -461,99 +380,103 @@
             <div class="header-brand">
                 <a href="/index.html" class="brand-link">Saita Shinya</a>
             </div>
-            <nav>
+            <nav style="display: flex; gap: 1.5rem; align-items: center;">
+                <a href="/chrome/notify-me/" class="header-nav-link">
+                    <i class="fas fa-arrow-left"></i> Notify me!
+                </a>
                 <a href="/index.html" class="header-nav-link">
-                    <i class="fas fa-arrow-left"></i> Back to Portfolio
+                    Portfolio
                 </a>
             </nav>
         </div>
     </header>
 
-    <!-- App Hero -->
-    <section class="app-hero">
+    <!-- Privacy Policy -->
+    <section class="policy-section">
         <div class="container">
-            <div class="app-hero-content">
-                <div class="app-icon">
-                    <img src="/img/works/notify-me.png" alt="Notify me! icon">
-                </div>
-                <div class="app-info">
-                    <h1>Notify me!</h1>
-                    <p class="app-subtitle">Full-Screen Notification Timer & Scheduled Alarm</p>
-                    <p class="app-description">
-                        A Chrome extension that ensures you never miss a meeting or scheduled event.
-                        It displays full-screen notifications so you can stay focused on your work
-                        without worrying about losing track of time.
+            <div class="policy-content">
+                <h2 class="policy-title">PRIVACY POLICY</h2>
+                <p class="policy-effective">Effective Date: February 26, 2026</p>
+
+                <div class="policy-subsection">
+                    <h3><i class="fas fa-info-circle"></i> Overview</h3>
+                    <p>
+                        Notify me! is a Chrome extension that provides full-screen notification timers and scheduled alarms.
+                        It optionally integrates with Google Calendar using read-only access to display upcoming event notifications.
+                        All data processing occurs entirely within your browser — no data is ever sent to external servers.
                     </p>
-                    <div class="app-buttons">
-                        <a href="https://chromewebstore.google.com/detail/notify-me/mbdbpcheokpifdgllibffdcpefngijfk" target="_blank" class="btn-cws">
-                            <i class="fab fa-chrome"></i> View on Chrome Web Store
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Features -->
-    <section class="features-section">
-        <div class="container">
-            <div class="features-content">
-                <h2 class="features-title">FEATURES</h2>
-
-                <div class="feature-item">
-                    <div class="feature-icon">
-                        <i class="fas fa-display"></i>
-                    </div>
-                    <div class="feature-text">
-                        <h3>Full-Screen Notifications</h3>
-                        <p>Impossible-to-miss alerts that take over your entire screen, ensuring you never overlook an upcoming event.</p>
-                    </div>
                 </div>
 
-                <div class="feature-item">
-                    <div class="feature-icon">
-                        <i class="fas fa-calendar-check"></i>
-                    </div>
-                    <div class="feature-text">
-                        <h3>Google Calendar Integration</h3>
-                        <p>Connects to your Google Calendar with read-only access to automatically schedule notifications for your upcoming events.</p>
-                    </div>
+                <div class="policy-subsection">
+                    <h3><i class="fas fa-database"></i> Information We Access</h3>
+                    <p>When you connect your Google Calendar, Notify me! accesses the following data through the Google Calendar API (<code>calendar.readonly</code> scope):</p>
+                    <ul>
+                        <li>Event titles</li>
+                        <li>Event start and end times</li>
+                        <li>Event locations (if available)</li>
+                    </ul>
+                    <p>This information is used solely to schedule and display notifications within the extension.</p>
                 </div>
 
-                <div class="feature-item">
-                    <div class="feature-icon">
-                        <i class="fas fa-stopwatch"></i>
-                    </div>
-                    <div class="feature-text">
-                        <h3>Custom Timers</h3>
-                        <p>Set manual countdown timers for any task — perfect for time-boxing work sessions, breaks, or reminders.</p>
-                    </div>
+                <div class="policy-subsection">
+                    <h3><i class="fas fa-cog"></i> How We Use Your Data</h3>
+                    <p>
+                        Your calendar data is used exclusively to trigger full-screen notifications at the appropriate times.
+                        We do not analyze, profile, or use your data for any purpose other than displaying notifications as configured by you.
+                    </p>
                 </div>
 
-                <div class="feature-item">
-                    <div class="feature-icon">
-                        <i class="fas fa-lock"></i>
-                    </div>
-                    <div class="feature-text">
-                        <h3>Privacy-First Design</h3>
-                        <p>All data stays on your device. No external servers, no tracking, no data collection — just local notifications.</p>
-                    </div>
+                <div class="policy-subsection">
+                    <h3><i class="fas fa-hard-drive"></i> Data Storage</h3>
+                    <p>
+                        All data is stored locally on your device using <code>chrome.storage.local</code>.
+                        No data is transmitted to or stored on any external server.
+                        Your calendar information remains entirely within your browser environment.
+                    </p>
                 </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Privacy Policy Link -->
-    <section class="policy-link-section">
-        <div class="container">
-            <div class="policy-link-content">
-                <div class="policy-link-text">
-                    <h2>Privacy Policy</h2>
-                    <p>Learn how Notify me! handles your data and protects your privacy.</p>
+                <div class="policy-subsection">
+                    <h3><i class="fas fa-share-nodes"></i> Data Sharing</h3>
+                    <p>
+                        We do not sell, trade, or transfer your data to any third parties.
+                        Your information is never shared with advertisers, analytics providers, or any other external entities.
+                    </p>
                 </div>
-                <a href="/chrome/notify-me/privacy.html" class="btn-policy">
-                    <i class="fas fa-shield-halved"></i> Read Privacy Policy
-                </a>
+
+                <div class="policy-subsection">
+                    <h3><i class="fas fa-cloud"></i> Third-Party Services</h3>
+                    <p>
+                        The only third-party service used is the <a href="https://developers.google.com/calendar/api" target="_blank">Google Calendar API</a>,
+                        which is accessed with read-only permissions (<code>calendar.readonly</code>) to retrieve your upcoming events.
+                        Google's use of your data is governed by the
+                        <a href="https://policies.google.com/privacy" target="_blank">Google Privacy Policy</a>.
+                    </p>
+                </div>
+
+                <div class="policy-subsection">
+                    <h3><i class="fas fa-trash-can"></i> Data Retention</h3>
+                    <p>
+                        Calendar data is cached locally only for the duration needed to schedule notifications.
+                        When you uninstall the Notify me! extension, all locally stored data is automatically deleted by Chrome.
+                    </p>
+                </div>
+
+                <div class="policy-subsection">
+                    <h3><i class="fas fa-pen-to-square"></i> Changes to This Policy</h3>
+                    <p>
+                        We may update this privacy policy from time to time. Any changes will be reflected on this page
+                        with an updated effective date. We encourage you to review this page periodically.
+                    </p>
+                </div>
+
+                <div class="policy-subsection">
+                    <h3><i class="fas fa-user-shield"></i> Your Rights</h3>
+                    <p>
+                        You can revoke Notify me!'s access to your Google Calendar at any time through your
+                        <a href="https://myaccount.google.com/permissions" target="_blank">Google Account permissions settings</a>.
+                        You can also uninstall the extension at any time to remove all locally stored data.
+                    </p>
+                </div>
             </div>
         </div>
     </section>
@@ -563,7 +486,7 @@
         <div class="container">
             <div class="contact-content">
                 <h2 class="contact-title">CONTACT</h2>
-                <p>If you have any questions or feedback about the extension, please contact us:</p>
+                <p>If you have any questions about this privacy policy, please contact us:</p>
                 <br>
                 <a href="mailto:pemomomo@gmail.com" class="contact-email">
                     <i class="fas fa-envelope"></i> pemomomo@gmail.com
