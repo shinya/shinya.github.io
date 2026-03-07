@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notify me! - Full-Screen Notification Timer & Scheduled Alarm</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #3dcfc2;
+            --primary-dark: #2bb8ac;
+            --primary-light: #5dd8cd;
+            --secondary-color: #6c757d;
+            --dark-color: #2c3e50;
+            --light-color: #f8f9fa;
+            --white-color: #ffffff;
+            --gradient-primary: linear-gradient(135deg, #3dcfc2 0%, #00d4aa 100%);
+            --shadow-light: 0 4px 20px rgba(61, 207, 194, 0.1);
+            --shadow-medium: 0 8px 30px rgba(61, 207, 194, 0.15);
+            --shadow-card: 0 10px 30px rgba(0, 0, 0, 0.08);
+            --transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.7;
+            color: var(--dark-color);
+            background-color: #ffffff;
+        }
+
+        /* Header */
+        .site-header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid #e9ecef;
+        }
+
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .header-brand {
+            font-size: 1.5rem;
+            font-weight: 800;
+        }
+
+        .brand-link {
+            color: #2c3e50;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .brand-link:hover {
+            color: var(--primary-color);
+        }
+
+        .header-nav-link {
+            color: #2c3e50;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            letter-spacing: 0.05em;
+            transition: var(--transition);
+        }
+
+        .header-nav-link:hover {
+            color: var(--primary-color);
+        }
+
+        /* App Hero */
+        .app-hero {
+            padding: 5rem 0 4rem;
+            background: var(--light-color);
+            border-bottom: 1px solid #e9ecef;
+        }
+
+        .app-hero-content {
+            display: flex;
+            align-items: center;
+            gap: 3rem;
+        }
+
+        .app-icon {
+            width: 120px;
+            height: 120px;
+            flex-shrink: 0;
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: var(--shadow-card);
+            border: 1px solid #e9ecef;
+            background: #ffffff;
+        }
+
+        .app-icon img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        .app-info h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--dark-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .app-subtitle {
+            font-size: 1.1rem;
+            color: var(--secondary-color);
+            margin-bottom: 1rem;
+        }
+
+        .app-description {
+            font-size: 1rem;
+            line-height: 1.8;
+            color: var(--secondary-color);
+            margin-bottom: 1.5rem;
+        }
+
+        .app-buttons {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .btn-cws {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: var(--gradient-primary);
+            color: #ffffff;
+            text-decoration: none;
+            padding: 0.75rem 1.5rem;
+            border-radius: 12px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: var(--transition);
+            box-shadow: var(--shadow-light);
+        }
+
+        .btn-cws:hover {
+            color: #ffffff;
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-medium);
+        }
+
+        /* Features */
+        .features-section {
+            padding: 4rem 0;
+        }
+
+        .features-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .features-title {
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--dark-color);
+            margin-bottom: 2.5rem;
+            letter-spacing: 0.05em;
+        }
+
+        .feature-item {
+            display: flex;
+            gap: 1.25rem;
+            margin-bottom: 2rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid #e9ecef;
+        }
+
+        .feature-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .feature-icon {
+            flex-shrink: 0;
+            width: 48px;
+            height: 48px;
+            border-radius: 12px;
+            background: rgba(61, 207, 194, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .feature-icon i {
+            font-size: 1.25rem;
+            color: var(--primary-color);
+        }
+
+        .feature-text h3 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--dark-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .feature-text p {
+            font-size: 0.95rem;
+            line-height: 1.7;
+            color: var(--secondary-color);
+            margin: 0;
+        }
+
+        /* Privacy Policy Link */
+        .policy-link-section {
+            padding: 3rem 0;
+            background: var(--light-color);
+            border-top: 1px solid #e9ecef;
+        }
+
+        .policy-link-content {
+            max-width: 800px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 2rem;
+        }
+
+        .policy-link-text h2 {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--dark-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .policy-link-text p {
+            font-size: 0.95rem;
+            color: var(--secondary-color);
+            margin: 0;
+        }
+
+        .btn-policy {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: #ffffff;
+            color: var(--dark-color);
+            text-decoration: none;
+            padding: 0.75rem 1.5rem;
+            border-radius: 12px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: var(--transition);
+            border: 2px solid var(--primary-color);
+            white-space: nowrap;
+        }
+
+        .btn-policy i {
+            color: var(--primary-color);
+        }
+
+        .btn-policy:hover {
+            background: var(--primary-color);
+            color: #ffffff;
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-medium);
+        }
+
+        .btn-policy:hover i {
+            color: #ffffff;
+        }
+
+        /* Contact */
+        .contact-section {
+            padding: 4rem 0;
+        }
+
+        .contact-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .contact-title {
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--dark-color);
+            margin-bottom: 1.5rem;
+            letter-spacing: 0.05em;
+        }
+
+        .contact-email {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--dark-color);
+            text-decoration: none;
+            font-size: 1.1rem;
+            font-weight: 500;
+            transition: var(--transition);
+        }
+
+        .contact-email i {
+            color: var(--primary-color);
+        }
+
+        .contact-email:hover {
+            color: var(--primary-color);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--light-color);
+            color: var(--secondary-color);
+            text-align: center;
+            padding: 2rem 0;
+            border-top: 1px solid #e9ecef;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 0.9rem;
+            font-weight: 400;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-container {
+                padding: 1rem;
+            }
+
+            .app-hero {
+                padding: 3rem 0;
+            }
+
+            .app-hero-content {
+                flex-direction: column;
+                text-align: center;
+                gap: 1.5rem;
+            }
+
+            .app-icon {
+                width: 96px;
+                height: 96px;
+                border-radius: 20px;
+            }
+
+            .app-info h1 {
+                font-size: 2rem;
+            }
+
+            .app-subtitle {
+                font-size: 1rem;
+            }
+
+            .app-buttons {
+                justify-content: center;
+            }
+
+            .features-title {
+                font-size: 1.75rem;
+            }
+
+            .features-section {
+                padding: 3rem 0;
+            }
+
+            .policy-link-content {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .contact-section {
+                padding: 3rem 0;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .header-container {
+                flex-direction: column;
+                gap: 0.75rem;
+                padding: 0.75rem;
+            }
+
+            .app-hero {
+                padding: 2rem 0;
+            }
+
+            .app-icon {
+                width: 80px;
+                height: 80px;
+                border-radius: 16px;
+            }
+
+            .app-info h1 {
+                font-size: 1.5rem;
+            }
+
+            .app-subtitle {
+                font-size: 0.9rem;
+            }
+
+            .app-description {
+                font-size: 0.9rem;
+            }
+
+            .btn-cws,
+            .btn-policy {
+                font-size: 0.85rem;
+                padding: 0.6rem 1.2rem;
+            }
+
+            .features-title {
+                font-size: 1.5rem;
+            }
+
+            .feature-item {
+                gap: 1rem;
+            }
+
+            .feature-icon {
+                width: 40px;
+                height: 40px;
+                border-radius: 10px;
+            }
+
+            .feature-icon i {
+                font-size: 1rem;
+            }
+
+            .feature-text h3 {
+                font-size: 1rem;
+            }
+
+            .feature-text p {
+                font-size: 0.9rem;
+            }
+
+            .policy-link-text h2 {
+                font-size: 1.25rem;
+            }
+
+            .contact-title {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="site-header">
+        <div class="header-container">
+            <div class="header-brand">
+                <a href="/index.html" class="brand-link">Saita Shinya</a>
+            </div>
+            <nav>
+                <a href="/index.html" class="header-nav-link">
+                    <i class="fas fa-arrow-left"></i> Back to Portfolio
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- App Hero -->
+    <section class="app-hero">
+        <div class="container">
+            <div class="app-hero-content">
+                <div class="app-icon">
+                    <img src="/img/works/notify-me.png" alt="Notify me! icon">
+                </div>
+                <div class="app-info">
+                    <h1>Notify me!</h1>
+                    <p class="app-subtitle">Full-Screen Notification Timer & Scheduled Alarm</p>
+                    <p class="app-description">
+                        A Chrome extension that ensures you never miss a meeting or scheduled event.
+                        It displays full-screen notifications so you can stay focused on your work
+                        without worrying about losing track of time.
+                    </p>
+                    <div class="app-buttons">
+                        <a href="https://chromewebstore.google.com/detail/notify-me/mbdbpcheokpifdgllibffdcpefngijfk" target="_blank" class="btn-cws">
+                            <i class="fab fa-chrome"></i> View on Chrome Web Store
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section class="features-section">
+        <div class="container">
+            <div class="features-content">
+                <h2 class="features-title">FEATURES</h2>
+
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-display"></i>
+                    </div>
+                    <div class="feature-text">
+                        <h3>Full-Screen Notifications</h3>
+                        <p>Impossible-to-miss alerts that take over your entire screen, ensuring you never overlook an upcoming event.</p>
+                    </div>
+                </div>
+
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-calendar-check"></i>
+                    </div>
+                    <div class="feature-text">
+                        <h3>Google Calendar Integration</h3>
+                        <p>Connects to your Google Calendar with read-only access to automatically schedule notifications for your upcoming events.</p>
+                    </div>
+                </div>
+
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-stopwatch"></i>
+                    </div>
+                    <div class="feature-text">
+                        <h3>Custom Timers</h3>
+                        <p>Set manual countdown timers for any task — perfect for time-boxing work sessions, breaks, or reminders.</p>
+                    </div>
+                </div>
+
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-lock"></i>
+                    </div>
+                    <div class="feature-text">
+                        <h3>Privacy-First Design</h3>
+                        <p>All data stays on your device. No external servers, no tracking, no data collection — just local notifications.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Privacy Policy Link -->
+    <section class="policy-link-section">
+        <div class="container">
+            <div class="policy-link-content">
+                <div class="policy-link-text">
+                    <h2>Privacy Policy</h2>
+                    <p>Learn how Notify me! handles your data and protects your privacy.</p>
+                </div>
+                <a href="/chrome/notify-me/privacy.html" class="btn-policy">
+                    <i class="fas fa-shield-halved"></i> Read Privacy Policy
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-content">
+                <h2 class="contact-title">CONTACT</h2>
+                <p>If you have any questions or feedback about the extension, please contact us:</p>
+                <br>
+                <a href="mailto:pemomomo@gmail.com" class="contact-email">
+                    <i class="fas fa-envelope"></i> pemomomo@gmail.com
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Saita Shinya</p>
+        </div>
+    </footer>
+</body>
+</html>
