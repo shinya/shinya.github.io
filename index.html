@@ -3,7 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shinya - エンジニアポートフォリオ</title>
+    <title>Saita Shinya - Web / デスクトップ / 拡張機能まで、何でも作るエンジニア</title>
+    <meta name="description" content="Saita Shinyaのポートフォリオ。Web / デスクトップ / 拡張機能まで、何でも作るエンジニア。Bokuchi、SVGカレンダー、Chara Dropなど個人開発のプロダクトと、登壇・記事などのアウトプットを紹介。">
+    <meta name="author" content="Saita Shinya">
+    <link rel="canonical" href="https://shinya.dev/">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://shinya.dev/">
+    <meta property="og:title" content="Saita Shinya - エンジニアポートフォリオ">
+    <meta property="og:description" content="Web / デスクトップ / 拡張機能まで、何でも作るエンジニア。個人開発のプロダクトとアウトプットを紹介。">
+    <meta property="og:image" content="https://shinya.dev/img/ogp.png">
+    <meta property="og:locale" content="ja_JP">
+    <meta property="og:site_name" content="Saita Shinya Portfolio">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:creator" content="@saita_shinya">
+    <meta name="twitter:title" content="Saita Shinya - エンジニアポートフォリオ">
+    <meta name="twitter:description" content="Web / デスクトップ / 拡張機能まで、何でも作るエンジニア。">
+    <meta name="twitter:image" content="https://shinya.dev/img/ogp.png">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
+    <link rel="apple-touch-icon" href="img/favicon.svg">
+
+    <!-- JSON-LD: Person -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Saita Shinya",
+      "url": "https://shinya.dev/",
+      "image": "https://shinya.dev/img/profile.jpg",
+      "jobTitle": "Software Engineer",
+      "description": "Web / デスクトップ / 拡張機能まで、何でも作るエンジニア",
+      "sameAs": [
+        "https://github.com/shinya",
+        "https://qiita.com/ssaita",
+        "https://x.com/saita_shinya",
+        "https://speakerdeck.com/shinyasaita"
+      ]
+    }
+    </script>
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/portfolio.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
@@ -25,6 +68,12 @@
                         <a href="#works" class="header-nav-link">WORKS</a>
                     </li>
                     <li class="header-nav-item">
+                        <a href="#output" class="header-nav-link">OUTPUT</a>
+                    </li>
+                    <li class="header-nav-item">
+                        <a href="#experience" class="header-nav-link">EXPERIENCE</a>
+                    </li>
+                    <li class="header-nav-item">
                         <a href="#contact" class="header-nav-link">CONTACT</a>
                     </li>
                 </ul>
@@ -39,10 +88,11 @@
             <div class="hero-left">
                 <div class="hero-content">
                     <h1 class="hero-name">Saita Shinya</h1>
+                    <p class="hero-tagline">Web / デスクトップ / 拡張機能まで、<br>何でも作るエンジニア</p>
                     <div class="hero-profile">
-                        <p>Web技術を中心したシステムエンジニアです。利用者が喜ぶ顔を見るのが好きです。</p>
-                        <p>デザインと技術の両刀で、様々なアプリやサービスを開発しています。</p>
-                        <p>「最初の顧客は自分自身」をモットーに、まずは自分が使いやすいサービスを心がけています。</p>
+                        <p>本業はWeb系のシステム開発、プライベートではデスクトップアプリや拡張機能も作っています。</p>
+                        <p>利用者が喜ぶ顔を見るのが好きで、「最初の顧客は自分自身」をモットーに、自分が本当に使いたいプロダクトを形にしています。</p>
+                        <p>デザインと技術の両軸で、Web・デスクトップ・拡張機能まで領域を横断して開発してきました。</p>
                     </div>
                 </div>
             </div>
@@ -64,20 +114,24 @@
                 <div class="col-lg-8 mx-auto">
                     <h2 class="section-title-simple">SKILL</h2>
                     <div class="skill-item">
-                        <h3 class="skill-name">HTML5/CSS3/Javascript</h3>
-                        <p class="skill-description">レスポンシブデザインやCSSアニメーションも含めた、開発経験多数。Webデザインとコーディングが得意。</p>
-                    </div>
-                    <div class="skill-item">
-                        <h3 class="skill-name">PHP</h3>
-                        <p class="skill-description">一番開発経験が長い言語です。一番好きなフレームワークはCakePHPです。</p>
-                    </div>
-                    <div class="skill-item">
-                        <h3 class="skill-name">Node.js / Python / Rust</h3>
-                        <p class="skill-description">PHPの経験年数には劣りますが、最近の開発アプリはこれが多数を占めています。</p>
+                        <h3 class="skill-name">HTML5 / CSS3 / JavaScript / TypeScript</h3>
+                        <p class="skill-description">レスポンシブデザインやCSSアニメーションも含めた、開発経験多数。Webデザインとコーディングが得意。Vue / React を用いたSPA開発も多数。</p>
                     </div>
                     <div class="skill-item">
                         <h3 class="skill-name">Go</h3>
-                        <p class="skill-description">パフォーマンスを重視した開発ではGoを使った開発が多いです。好きなフレームワークはGinです。</p>
+                        <p class="skill-description">パフォーマンスを重視した開発ではGoを使うことが多いです。好きなフレームワークはGinです。SVGカレンダー、dev-cabinet のバックエンドなどで採用。</p>
+                    </div>
+                    <div class="skill-item">
+                        <h3 class="skill-name">Rust (Tauri)</h3>
+                        <p class="skill-description">デスクトップアプリの開発は Tauri (Rust + Web) で構築。Bokuchi、Micro Note、Lightning Timer などで採用。</p>
+                    </div>
+                    <div class="skill-item">
+                        <h3 class="skill-name">Node.js / Python</h3>
+                        <p class="skill-description">スクリプト・サーバーサイド・データ処理など、用途に応じて使い分け。近年の開発で出番が増えている言語。</p>
+                    </div>
+                    <div class="skill-item">
+                        <h3 class="skill-name">PHP</h3>
+                        <p class="skill-description">一番開発経験が長い言語です。一番好きなフレームワークはCakePHPです。OSS開発・B2B SaaS のバックエンドで長年使用。</p>
                     </div>
                     <div class="skill-item">
                         <h3 class="skill-name">Git / Docker / AWS</h3>
@@ -115,7 +169,14 @@
                                 </h4>
                                 <div class="work-meta">
                                     <span class="work-category">Webサービス</span>
-                                    <span class="work-tags">デザイン / 開発（レスポンシブデザイン） / サーバー構築・運用</span>
+                                    <span class="work-tags">デザイン / 開発 / サーバー構築・運用</span>
+                                </div>
+                                <div class="tech-badges">
+                                    <span class="tech-badge">Go</span>
+                                    <span class="tech-badge">Gin</span>
+                                    <span class="tech-badge">SVG</span>
+                                    <span class="tech-badge">Docker</span>
+                                    <span class="tech-badge">Nginx</span>
                                 </div>
                                 <p class="work-description">拡大しても劣化しないベクター形式のカレンダー。<br>
                                     日本の祝日対応、カスタマイズ可能な色設定、過去の日付の斜線表示機能を提供。<br>
@@ -134,7 +195,17 @@
                                 </h4>
                                 <div class="work-meta">
                                     <span class="work-category">Webサービス</span>
-                                    <span class="work-tags">デザイン / 開発（レスポンシブデザイン） / サーバー構築・運用</span>
+                                    <span class="work-tags">デザイン / 開発 / サーバー構築・運用</span>
+                                </div>
+                                <div class="tech-badges">
+                                    <span class="tech-badge">Vue 3</span>
+                                    <span class="tech-badge">Vite</span>
+                                    <span class="tech-badge">Chart.js</span>
+                                    <span class="tech-badge">Go</span>
+                                    <span class="tech-badge">Gin</span>
+                                    <span class="tech-badge">GORM</span>
+                                    <span class="tech-badge">MySQL</span>
+                                    <span class="tech-badge">AWS S3</span>
                                 </div>
                                 <p class="work-description">ゲームのステータス画面のようにエンジニアのスキルを紹介するサービス。<br>
                                     視覚的に分かりやすいスキルマップを提供。<br>
@@ -153,7 +224,14 @@
                                 </h4>
                                 <div class="work-meta">
                                     <span class="work-category">Webサービス</span>
-                                    <span class="work-tags">デザイン / 開発（レスポンシブデザイン） / サーバー構築・運用</span>
+                                    <span class="work-tags">デザイン / 開発 / サーバー構築・運用</span>
+                                </div>
+                                <div class="tech-badges">
+                                    <span class="tech-badge">Vue 3</span>
+                                    <span class="tech-badge">TypeScript</span>
+                                    <span class="tech-badge">Vite</span>
+                                    <span class="tech-badge">SVG</span>
+                                    <span class="tech-badge">Docker</span>
                                 </div>
                                 <p class="work-description">フォームに入力するだけで美しいプロフィール画像を自動生成できるサービス。<br>
                                     背景色・文字色・パターンを自由にカスタマイズでき、SVG/PNG形式でダウンロード可能。<br>
@@ -177,7 +255,17 @@
                                 </h4>
                                 <div class="work-meta">
                                     <span class="work-category">デスクトップアプリケーション</span>
-                                    <span class="work-tags">デザイン / 開発</span>
+                                    <span class="work-tags">デザイン / 開発 / OSS</span>
+                                </div>
+                                <div class="tech-badges">
+                                    <span class="tech-badge">Tauri 2</span>
+                                    <span class="tech-badge">Rust</span>
+                                    <span class="tech-badge">React</span>
+                                    <span class="tech-badge">TypeScript</span>
+                                    <span class="tech-badge">MUI</span>
+                                    <span class="tech-badge">Monaco Editor</span>
+                                    <span class="tech-badge">Marp</span>
+                                    <span class="tech-badge">Mermaid</span>
                                 </div>
                                 <p class="work-description">クロスプラットフォーム対応の、軽くて高性能なMarkdownエディター。<br>
                                     シンプルなインターフェースで、Markdownの編集に特化した機能を提供。<br>
@@ -197,7 +285,14 @@
                                 </h4>
                                 <div class="work-meta">
                                     <span class="work-category">デスクトップアプリケーション</span>
-                                    <span class="work-tags">デザイン / 開発</span>
+                                    <span class="work-tags">デザイン / 開発 / OSS</span>
+                                </div>
+                                <div class="tech-badges">
+                                    <span class="tech-badge">Tauri 2</span>
+                                    <span class="tech-badge">Rust</span>
+                                    <span class="tech-badge">Vue 3</span>
+                                    <span class="tech-badge">TailwindCSS</span>
+                                    <span class="tech-badge">SQLite</span>
                                 </div>
                                 <p class="work-description">数行程度のメモをTwitterのように保存して貼り付けられるようにするアプリ。<br>
                                     軽量で使いやすいメモツール。<br>
@@ -217,7 +312,14 @@
                                 </h4>
                                 <div class="work-meta">
                                     <span class="work-category">デスクトップアプリケーション</span>
-                                    <span class="work-tags">デザイン / 開発</span>
+                                    <span class="work-tags">デザイン / 開発 / OSS</span>
+                                </div>
+                                <div class="tech-badges">
+                                    <span class="tech-badge">Tauri 2</span>
+                                    <span class="tech-badge">Rust</span>
+                                    <span class="tech-badge">React</span>
+                                    <span class="tech-badge">TypeScript</span>
+                                    <span class="tech-badge">Vite</span>
                                 </div>
                                 <p class="work-description">軽量なクロスプラットフォームタイマーアプリケーション。<br>
                                     エンジニアのLT時間を計測するために作成した「絶対に気づくタイマー」がモットーです。</p>
@@ -238,12 +340,116 @@
                                     <span class="work-category">Chrome拡張機能</span>
                                     <span class="work-tags">デザイン / 開発</span>
                                 </div>
+                                <div class="tech-badges">
+                                    <span class="tech-badge">Chrome Extension</span>
+                                    <span class="tech-badge">Manifest V3</span>
+                                    <span class="tech-badge">JavaScript</span>
+                                </div>
                                 <p class="work-description">会議などの予定を見過ごさないための通知アプリ。 <br>
                                     集中作業中でも時間を忘れずに済むよう、画面に通知を表示。</p>
                                 <a href="chrome/notify-me/privacy.html" class="work-policy-link"><i class="fas fa-shield-halved"></i> Privacy Policy</a>
                             </div>
                         </div>
 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Output Section -->
+    <section id="output" class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <h2 class="section-title-simple">OUTPUT</h2>
+
+                    <!-- TALKS subcategory -->
+                    <div class="works-subcategory">
+                        <h3 class="works-subcategory-title"><i class="fas fa-microphone-lines"></i> TALKS</h3>
+                        <div class="talks-grid">
+                            <a href="https://speakerdeck.com/shinyasaita/aipuroguramadevinha-phpernomeng-wojian-ruka" target="_blank" class="talk-card">
+                                <div class="talk-thumb-wrap">
+                                    <img src="https://files.speakerdeck.com/presentations/64d3199a8ba9440ea31991416e60606b/slide_0.jpg" alt="AIプログラマーDevinは PHPerの夢を見るか？" class="talk-thumb" loading="lazy">
+                                </div>
+                                <div class="talk-info">
+                                    <h4 class="talk-title">AIプログラマーDevinは PHPerの夢を見るか？</h4>
+                                    <p class="talk-meta"><i class="far fa-eye"></i> 680 views</p>
+                                </div>
+                            </a>
+                            <a href="https://speakerdeck.com/shinyasaita/zi-zuo-edeitawoossnisitefen-katuta-ren-nici-sarukai-fa-gashi-jie-wodong-kasuli-you" target="_blank" class="talk-card">
+                                <div class="talk-thumb-wrap">
+                                    <img src="https://files.speakerdeck.com/presentations/be65ed0dcd2d4d759da5d5f185909195/slide_0.jpg" alt="自作エディターをOSSにして分かった、一人に刺さる開発が世界を動かす理由" class="talk-thumb" loading="lazy">
+                                </div>
+                                <div class="talk-info">
+                                    <h4 class="talk-title">自作エディターをOSSにして分かった、一人に刺さる開発が世界を動かす理由</h4>
+                                    <p class="talk-meta"><i class="far fa-eye"></i> 260 views</p>
+                                </div>
+                            </a>
+                            <a href="https://speakerdeck.com/shinyasaita/osskai-fa-zhe-karabatukuohuisuxi-saasnizhuan-zhi-sitegan-zitaphpnojia-zhi-nowei-i" target="_blank" class="talk-card">
+                                <div class="talk-thumb-wrap">
+                                    <img src="https://files.speakerdeck.com/presentations/0476cf28b44e4316a7c1bfe099a7441c/slide_0.jpg" alt="OSS開発者からバックオフィス系SaaSに転職して感じたPHPの価値の違い" class="talk-thumb" loading="lazy">
+                                </div>
+                                <div class="talk-info">
+                                    <h4 class="talk-title">OSS開発者からバックオフィス系SaaSに転職して感じたPHPの価値の違い</h4>
+                                    <p class="talk-meta"><i class="far fa-eye"></i> 150 views</p>
+                                </div>
+                            </a>
+                            <a href="https://speakerdeck.com/shinyasaita/ge-ren-kai-fa-notaningupointo" target="_blank" class="talk-card">
+                                <div class="talk-thumb-wrap">
+                                    <img src="https://files.speakerdeck.com/presentations/54072568b37a486dbfd28883239e2ec7/slide_0.jpg" alt="個人開発のターニングポイント" class="talk-thumb" loading="lazy">
+                                </div>
+                                <div class="talk-info">
+                                    <h4 class="talk-title">個人開発のターニングポイント</h4>
+                                    <p class="talk-meta"><i class="far fa-eye"></i> 75 views</p>
+                                </div>
+                            </a>
+                            <a href="https://speakerdeck.com/shinyasaita/nandekonokai-fa-phpnandatuke-xian-chang-mu-xian-noji-shu-xuan-ding-wo-shuo-ming-dekirureberu-madeagerufang-fa" target="_blank" class="talk-card">
+                                <div class="talk-thumb-wrap">
+                                    <img src="https://files.speakerdeck.com/presentations/65cf042692d740ed92cc2d9833a9046d/slide_0.jpg" alt="「なんでこの開発、PHPなんだっけ？」現場目線の技術選定を「説明できるレベル」まであげる方法" class="talk-thumb" loading="lazy">
+                                </div>
+                                <div class="talk-info">
+                                    <h4 class="talk-title">「なんでこの開発、PHPなんだっけ？」現場目線の技術選定を「説明できるレベル」まであげる方法</h4>
+                                    <p class="talk-meta"><i class="far fa-eye"></i> 33 views</p>
+                                </div>
+                            </a>
+                        </div>
+                        <p class="see-more"><a href="https://speakerdeck.com/shinyasaita" target="_blank" class="see-more-link">SpeakerDeckで全ての登壇を見る <i class="fas fa-arrow-right"></i></a></p>
+                    </div>
+
+                    <!-- ARTICLES subcategory -->
+                    <div class="works-subcategory">
+                        <h3 class="works-subcategory-title"><i class="fas fa-pen-fancy"></i> ARTICLES</h3>
+                        <p class="output-description">技術記事は Qiita に投稿しています。個人開発・PHP・OSS開発の知見などを発信中。</p>
+                        <p class="see-more"><a href="https://qiita.com/ssaita" target="_blank" class="see-more-link">Qiita @ssaita で記事を見る <i class="fas fa-arrow-right"></i></a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="py-5 bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <h2 class="section-title-simple">EXPERIENCE</h2>
+                    <p class="experience-intro">2008年からエンジニアとして活動しています。</p>
+                    <div class="experience-item">
+                        <div class="experience-period">2008〜</div>
+                        <h3 class="experience-title">SIer時代（約4-5年）</h3>
+                        <p class="experience-description">受託開発を中心に、システム開発の基礎を学ぶ。要件定義から運用まで一連の流れを経験。</p>
+                    </div>
+                    <div class="experience-item">
+                        <div class="experience-period">2010年代前半〜</div>
+                        <h3 class="experience-title">SaaSプロダクト / OSS開発（約10年）</h3>
+                        <p class="experience-description">B2B SaaS プロダクトの開発に従事。うち約2年間はOSS開発に専念し、世界中のユーザーに使われるプロダクトの設計・運用を経験。</p>
+                    </div>
+                    <div class="experience-domains">
+                        <span class="experience-domain-label">関わってきた領域：</span>
+                        <span class="experience-domain">受託開発</span>
+                        <span class="experience-domain">B2B SaaS</span>
+                        <span class="experience-domain">OSS開発</span>
                     </div>
                 </div>
             </div>
@@ -259,14 +465,17 @@
                     <div class="contact-content">
                         <p class="contact-text">お問い合わせ等は、<br>X（旧Twitter）のアカウントへどうぞ。</p>
                         <div class="contact-links">
+                            <a href="https://x.com/saita_shinya" target="_blank" class="contact-link-item">
+                                <i class="fab fa-twitter"></i> X
+                            </a>
                             <a href="https://github.com/shinya" target="_blank" class="contact-link-item">
                                 <i class="fab fa-github"></i> GitHub
                             </a>
                             <a href="https://qiita.com/ssaita" target="_blank" class="contact-link-item">
                                 <i class="fas fa-pen-fancy"></i> Qiita
                             </a>
-                            <a href="https://x.com/saita_shinya" target="_blank" class="contact-link-item">
-                                <i class="fab fa-twitter"></i> X
+                            <a href="https://speakerdeck.com/shinyasaita" target="_blank" class="contact-link-item">
+                                <i class="fas fa-chalkboard-user"></i> SpeakerDeck
                             </a>
                         </div>
                     </div>
@@ -281,28 +490,11 @@
             <div class="row">
                 <div class="col-lg-8 mx-auto text-center">
                     <p>&copy; 2026 Saita Shinya</p>
+                    <p class="footer-updated">Last updated: 2026-05-27</p>
                 </div>
             </div>
         </div>
     </footer>
-
-    <!-- Work Detail Modal -->
-    <div class="modal fade" id="workModal" tabindex="-1" aria-labelledby="workModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="workModalLabel">Work Details</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body" id="workModalBody">
-                    <!-- Content will be dynamically loaded -->
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                </div>
-            </div>
-        </div>
-    </div>
 
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>

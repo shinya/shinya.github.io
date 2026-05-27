@@ -211,13 +211,22 @@ body {
     font-size: 5rem;
     font-weight: 900;
     line-height: 1.1;
-    margin-bottom: 3rem;
+    margin-bottom: 1.5rem;
     letter-spacing: -0.02em;
     color: #2c3e50;
     word-wrap: break-word;
     overflow-wrap: break-word;
     hyphens: auto;
     max-width: 100%;
+}
+
+.hero-tagline {
+    font-size: 1.25rem;
+    font-weight: 700;
+    line-height: 1.5;
+    margin-bottom: 2.5rem;
+    color: var(--primary-color);
+    letter-spacing: 0.01em;
 }
 
 .hero-profile {
@@ -1110,6 +1119,257 @@ footer p {
 
     .contact-link-item {
         font-size: 0.9rem;
+    }
+}
+
+/* Tech Stack Badges (WORKS section) */
+.tech-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin: 0.75rem 0 0;
+}
+
+.tech-badge {
+    display: inline-block;
+    font-size: 0.72rem;
+    font-weight: 600;
+    color: var(--primary-dark);
+    background: rgba(61, 207, 194, 0.08);
+    border: 1px solid rgba(61, 207, 194, 0.2);
+    padding: 0.2rem 0.6rem;
+    border-radius: 4px;
+    letter-spacing: 0.02em;
+    line-height: 1.4;
+    white-space: nowrap;
+}
+
+/* OUTPUT Section - Talks Grid */
+.talks-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.25rem;
+    margin-bottom: 1.5rem;
+}
+
+.talk-card {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: inherit;
+    background: #ffffff;
+    border: 1px solid #e9ecef;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: var(--transition);
+}
+
+.talk-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    border-color: var(--primary-color);
+}
+
+.talk-thumb-wrap {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    background: #f8f9fa;
+    overflow: hidden;
+}
+
+.talk-thumb {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.talk-info {
+    padding: 0.9rem 1rem 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    flex: 1;
+}
+
+.talk-title {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #2c3e50;
+    line-height: 1.5;
+    margin: 0;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.talk-card:hover .talk-title {
+    color: var(--primary-color);
+}
+
+.talk-meta {
+    font-size: 0.8rem;
+    color: #adb5bd;
+    margin: 0;
+    margin-top: auto;
+}
+
+.talk-meta i {
+    margin-right: 0.3rem;
+}
+
+.see-more {
+    text-align: right;
+    margin: 0.5rem 0 0;
+}
+
+.see-more-link {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+.see-more-link i {
+    margin-left: 0.3rem;
+    transition: var(--transition);
+}
+
+.see-more-link:hover {
+    color: var(--primary-dark);
+}
+
+.see-more-link:hover i {
+    transform: translateX(4px);
+}
+
+.output-description {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: #6c757d;
+    margin: 0 0 1rem;
+}
+
+/* EXPERIENCE Section */
+.experience-intro {
+    font-size: 1rem;
+    color: #6c757d;
+    margin-bottom: 2.5rem;
+    line-height: 1.7;
+}
+
+.experience-item {
+    margin-bottom: 2.5rem;
+    padding-left: 1.5rem;
+    border-left: 3px solid var(--primary-color);
+}
+
+.experience-period {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    letter-spacing: 0.05em;
+    margin-bottom: 0.4rem;
+}
+
+.experience-title {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #2c3e50;
+    margin: 0 0 0.6rem;
+    line-height: 1.5;
+}
+
+.experience-description {
+    font-size: 0.95rem;
+    line-height: 1.8;
+    color: #6c757d;
+    margin: 0;
+}
+
+.experience-domains {
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #e9ecef;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+.experience-domain-label {
+    font-size: 0.9rem;
+    color: #6c757d;
+    margin-right: 0.3rem;
+}
+
+.experience-domain {
+    display: inline-block;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--primary-dark);
+    background: rgba(61, 207, 194, 0.08);
+    border: 1px solid rgba(61, 207, 194, 0.2);
+    padding: 0.3rem 0.75rem;
+    border-radius: 4px;
+}
+
+/* Footer */
+.footer-updated {
+    font-size: 0.75rem;
+    color: #adb5bd;
+    margin-top: 0.5rem !important;
+}
+
+/* Talks grid - responsive */
+@media (max-width: 768px) {
+    .talks-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .experience-item {
+        padding-left: 1.25rem;
+    }
+
+    .experience-title {
+        font-size: 1.05rem;
+    }
+
+    .hero-tagline {
+        font-size: 1.05rem;
+        margin-bottom: 1.75rem;
+    }
+
+    .tech-badge {
+        font-size: 0.68rem;
+        padding: 0.15rem 0.5rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-tagline {
+        font-size: 0.9rem;
+        margin-bottom: 1.25rem;
+        line-height: 1.5;
+    }
+
+    .talk-title {
+        font-size: 0.88rem;
+    }
+
+    .experience-period {
+        font-size: 0.8rem;
+    }
+
+    .experience-title {
+        font-size: 0.95rem;
+    }
+
+    .experience-description {
+        font-size: 0.85rem;
     }
 }
 
